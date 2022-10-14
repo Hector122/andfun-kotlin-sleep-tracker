@@ -32,7 +32,7 @@ abstract class SleepDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: SleepDatabase? = null
 
-        fun getInstance(context: Context): SleepDatabase? {
+        fun getInstance(context: Context): SleepDatabase {
             // Multiple threads can ask for the database at the same time, ensure we only initialize
             // it once by using synchronized. Only one thread may enter a synchronized block at a
             // time.
